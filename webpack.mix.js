@@ -6,3 +6,6 @@ mix.js('src/app.js', 'js')
       files: ['css/*.css', 'js/*.js', 'index.html'],
       server: "./"
    })
+   .options({
+      processCssUrls: false
+   })
