@@ -1,0 +1,68 @@
+$bg: #fff;
+$text: #0a0a0a;
+
+@mixin text {
+    color: $text;
+    opacity: .8;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 5rem;
+    
+    &.title {
+        font-family: 'Trade winds', cursive;
+        display: inline-block;
+        @include text;
+        margin: 2rem 0; 
+    }
+}
+
+.list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 3rem 2rem;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0; top: 0;
+        width: 100%;
+        height: 100%;
+        opacity: .5;
+        background-image: url('../img/paper.webp');
+        // background-size: 50%;
+        z-index: -1;
+    }
+
+    h5 {
+        font-family: 'Albert Sans', sans-serif;
+        text-transform: uppercase;
+    }
+
+    ul {
+        margin-bottom: 1.375rem;
+    }
+
+    li {
+        display: inline;
+        font-family: 'Mynerve', cursive;
+
+        &:not(:first-child):before {
+            content: '\00b7  ';
+        }
+
+        p {
+            font-family: 'Mynerve', cursive;
+            word-wrap: break-word;
+        }
+    }
+}
